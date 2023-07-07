@@ -30,7 +30,7 @@
 
 - 使用springdoc-openapi-ui生成api文档
 - io.swagger.v3
-- 访问地址：http://localhost:8080/swagger-ui/index.html
+- 访问地址：http://localhost/swagger-ui/index.html
 
 ### 4. MVC
 
