@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: '********'
+
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    com:
+      zhangpy:
+        springLearn:
+    .controller: trace
+
+mybatis:
+  type-aliases-package: com.zhangpy.springLearn.bean
+  configuration:
+    map-underscore-to-camel-case: true  # 开启驼峰命名匹配
+  mapper-locations:
+    - classpath:mapper/*.xml

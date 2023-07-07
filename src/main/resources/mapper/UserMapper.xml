@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhangpy.springLearn.dao.UserMapper">
+    <select id="findAll" resultType="com.zhangpy.springLearn.bean.User">
+        select * from user
+    </select>
+
+    <select id="getUserByNameAndPassword" resultType="com.zhangpy.springLearn.bean.User" parameterType="com.zhangpy.springLearn.bean.User">
+        select * from user where username=#{username} and password=#{password}
+    </select>
+
+    <select id="getUserByName" resultType="com.zhangpy.springLearn.bean.User" parameterType="String">
+        select * from user where username=#{username}
+    </select>
+
+    <insert id="addUser" parameterType="String">
+        insert into user(username,password,filepath) values(#{username},#{password},'Test')
+    </insert>
+</mapper>

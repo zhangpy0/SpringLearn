@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户信息</title>
+</head>
+<body>
+    <form action="" th:object="${user}">
+        用户名：<input name="username" th:value="${user.username}"/><br/>
+        密码：<input name="password" th:value="${user.password}"/><br/>
+    </form>
+</body>
+</html>
